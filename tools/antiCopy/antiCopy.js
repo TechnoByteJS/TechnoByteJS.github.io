@@ -30,21 +30,19 @@ const antiCopy = {
         shortcut.add("Ctrl+s", function (){});
         shortcut.add("Ctrl+u", function (){});
         shortcut.add("Ctrl+Shift+i", function (){});
-
-        // adds required CSS
-        document.body.innerHTML+="<style>#copyShield,#antiCopySS{position:fixed;top:0;bottom:0;left:0;right:0;z-index:99999;background:transparent;overflow:hidden}</style>";
-       
+              
         // creates screenshot of page and deletes page content, then covers page with screenshot
         const screenshotTarget = document.body;
         if(typeof html2canvas!=='undefined') {
             html2canvas(screenshotTarget).then((canvas) => {
                 const base64image = canvas.toDataURL("image/png");
                 document.body.innerHTML="";
-                document.body.innerHTML+=`<img src= '${base64image}' id='copyShield'>`;
+                document.body.innerHTML+=`<img src='${base64image}' id='copyShield' style="position:fixed;top:-1px;bottom:0;left:0;right:0;z-index:99999;overflow:hidden">`;
+                document.body.innerHTML+=`<style>html,body{overflow:hidden}</style>`;
             });
         } else {
             // if no html2canvas
-            document.body.innerHTML+="<div id='copyShield'></div>";
+            document.body.innerHTML+=`<div id='copyShield' style="position:fixed;top:0;bottom:0;left:0;right:0;z-index:99999;background:transparent;overflow:hidden"></div>`;
         }
         setInterval(function() {
             antiCopy.checkTamper()
