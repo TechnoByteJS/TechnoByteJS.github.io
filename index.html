@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="manifest" href="/manifest.json">
+        <title>Loading...</title>
+        <script>
+            if (!localStorage.launcher) {
+                location.pathname = "/appcenter/";
+            } else {
+                location.pathname = "/" + localStorage.launcher + "/";
+            }
+        </script>
+    </head>
+    <body>
+        <p>Please Wait...</p>
+    </body>
+</html>

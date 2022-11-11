@@ -1,0 +1,13 @@
+input {
+    height: 30px!important;
+    padding: 4px!important;
+    margin: 2px!important;
+    width: 100px!important;
+    margin-left: 5px!important;
+}
+#randomPassResult {
+    line-break: anywhere;
+}
+p {
+    margin: 10px!important;
+}

@@ -1,0 +1,551 @@
+@import "/fonts/fonts.css";
+@import "/icons/icons.css";
+#watermark {
+    position: fixed;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    font-family: monospace!important;
+    text-align: right;
+    height: 20px;
+    font-size: 12px;
+    margin: 0;
+    padding:0;
+    top: 5px;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    text-shadow: 0px 1px 0px black, 0px -1px 0px black, -1px 0px 0px black, 1px 0px 0px black;
+    color: #fff!important;
+    box-sizing: border-box;
+    display: block;
+}
+
+header {
+    background: var(--appTile);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    float: left;
+    padding: 10px;
+    position: fixed;
+    border-radius: 15px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    z-index: 990;
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    box-shadow: 0 1px 7px -2px var(--shadow);
+    transition: 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+header>.appIcon {
+    height: 36px;
+    width: 36px;
+    float: left;
+    margin-right: 5px;
+}
+
+header>.actionBar {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: none;
+}
+
+header>.actionBar>button {
+    margin: 0;
+    padding: 0 5px;
+    box-shadow: none;
+    background: none!important;
+    opacity: 0.6;
+}
+
+header>.actionBar>p {
+    margin: 0 5px;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+header>.actionBar>button:hover {
+    opacity: 1;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--foreground);
+    user-select: none;
+    overscroll-behavior: contain
+}
+
+body {
+    z-index: 0;
+    padding-top: 70px;
+}
+
+html {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center
+}
+
+e {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+}
+
+r {
+    float: right;
+    color: var(--foreground2)
+}
+
+.alt {
+    color: var(--foreground2)
+}
+
+p {
+    font-size: 14px;
+    margin: 10px
+}
+
+p2 {
+    display: block;
+    margin: 7px;
+    margin-left: 7px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    font-size: 20px;
+    width: max-content;
+    text-shadow: 0 0 3px var(--shadow);
+}
+
+.dialog > p2 {
+    margin-left: 0;
+    margin-top: 0;
+    user-select: none;
+	text-shadow: none
+}
+
+.area {
+    box-shadow: 0 0 4px 0px var(--shadow);
+    background: var(--area);
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.actionBar {
+    box-shadow: 0 0 4px 0px var(--shadow);
+    background: var(--area);
+    border-radius: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+    padding: 2px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+textarea {
+    background: var(--elementcolor);
+    border-radius: 10px;
+    color: var(--foreground);
+    width: -webkit-fill-available;
+    width: -moz-available;
+    min-height: 240px;
+    resize: none;
+    transition: 0.2s;
+    margin: 10px;
+    margin-top: 5px;
+    padding: 7px;
+    border:none;
+    box-shadow: 0 1px 7px -4px var(--shadow);
+}
+
+.textareabig {
+    height: 80%;
+}
+input[type="password"], input[type="text"], input[type="number"] {
+    background: var(--elementcolor);
+    border: none;
+    border-radius: 50px;
+    color: var(--foreground);
+    padding: 5px;
+    margin-left: 5px;
+    height: 32px;
+    width: 280px;
+    transition: .1s
+}
+
+input:focus {
+    background: var(--foreground3);
+}
+
+textarea:focus {
+    background: var(--background2);
+}
+
+button, .button {
+    font-family: 'Inter', Arial;
+    font-size: 14px;
+    background: var(--elementcolor);
+    padding: 6px;
+    border: 0;
+    border-radius: 20px;
+    color: var(--foreground);
+    margin: 4px;
+    cursor: pointer;
+    transition: 0.1s
+}
+
+button:active, .button:active {
+    cursor: default;
+    background: var(--active)!important
+}
+
+:focus {
+    outline: 0
+}
+
+#loadingscreen {
+    position: fixed;
+    background: var(--background);
+    color: var(--foreground);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1000
+}
+
+#loadingtext {
+    font-size: 48px;
+    font-family: sans-serif;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+#jslogo {
+    position: fixed;
+    font-size: 24px;
+    font-family: sans-serif;
+    bottom: 10px;
+    right: 10px;
+    color: var(--foreground2)
+}
+
+.errorScreen {
+    z-index: 9999;
+    padding: 10px;
+    position: fixed;
+    background: var(--background); 
+    font-size: 15px!important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.dialog {
+    z-index: 9999;
+    padding: 10px;
+    position: fixed;
+    background: var(--background);
+    border: 1px solid var(--border);
+    font-size: 15px!important;
+    border-radius: 15px;
+    width: 80%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 16px 1px var(--shadow);
+    user-select: text
+}
+
+.dialog>button {
+    min-width: 50px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    font-size: 14px!important;
+    height: max-content;
+    user-select: none;
+}
+
+.dialogOverlay {
+    z-index: 9998;
+    position: fixed;
+    background: var(--darkoverlay);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px)saturate(0.8);
+}
+
+select {
+    background: var(--elementcolor);
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 20px;
+    color: var(--foreground);
+    margin: 2px;
+    cursor: pointer;
+    min-width: 100px;
+    font-family: 'Inter', Arial, sans-serif;
+    transition: 0.2s;
+}
+
+select:active {
+    background: var(--active);
+}
+
+.headerButtons {
+    background: var(--transparent);
+    position: fixed;
+    top:14px;
+    right:10px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 999;
+    transition: 0.2s;
+    border-radius: 20px;
+}
+.headerButton {
+    width: 30px;
+    height: 30px;
+    padding:0;
+    background: var(--transparent);
+    border-radius: 50%;
+    font-size: 20px!important;
+    border: var(--transparent)!important;
+    margin: 3px;
+    color: var(--foreground2)
+}
+.headerButton:active {
+    background: var(--active)!important
+}
+
+button>.icon {
+    font-size: 18px;
+    vertical-align: sub;
+    margin-right: 2px;
+}
+
+p2>.icon {
+    font-size: 24px;
+    vertical-align: sub;
+    margin-right: 2px;
+}
+
+p>.icon {
+    vertical-align: text-top;
+    margin-right: 2px
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+::placeholder {
+    color: var(--foreground);
+    opacity: 0.4;
+}
+
+.appTile {
+    display: flex;
+    vertical-align: middle;
+    background: var(--appTile);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.1s;
+    float:left;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 7px -2px var(--shadow);
+}
+.appTile p {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.appTile:active {
+    background: var(--active)!important;
+    cursor: default;
+}
+
+.appIcon {
+    font-size: 60px;
+    height: 70px;
+    width: 70px
+}
+
+@media(hover: hover) {
+    .headerButton:hover {
+        background: var(--foreground3);
+        color: var(--foreground);
+    }
+
+    a:hover {
+        color: var(--foreground);
+        text-decoration: underline;
+    }
+    
+    button:hover, .button:hover {
+        background: var(--foreground3);
+    }
+
+    select:hover {
+        background: var(--foreground3);
+    }
+
+    .appTile:hover {
+        background: var(--elementcolor);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--foreground3);
+    }
+}
+
+@media(max-width: 350px) {
+    header {
+        font-size: 24px;
+        padding: 5px;
+		padding-left: 10px
+    }
+
+    body {
+        padding-top: 48px
+    }
+
+    .headerButtons {
+        top: 7px;
+        right: 7px;
+    }
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background)
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--elementcolor);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--active);
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--elementcolor);
+    transition: .2s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background: var(--foreground);
+    transition: .2s;
+    border-radius: 50px;
+}
+
+input:checked+.slider {
+    background: var(--accent)
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px)
+}
+
+.slider.round {
+    border-radius: 17px
+}
+
+.slider.round:before {
+    border-radius: 50%
+}
+
+.toggleSwitchContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}

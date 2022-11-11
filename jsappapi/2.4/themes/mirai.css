@@ -1,0 +1,16 @@
+:root {
+	--background: hsl(220, 22%, 12%);
+	--background2: hsl(220, 23%, 15%);
+	--shadow: #000;
+	--foreground: hsl(195, 50%, 91%);
+	--foreground2: hsl(195, 15%, 61%);
+	--foreground3: var(--elementcolor);
+	--elementcolor: hsl(220, 22%, 20%);
+	--active: hsl(220, 23%, 24%);
+	--border: hsl(195, 15%, 28%);
+	--transparent: #00000000;
+	--black: #000000;
+	--darkoverlay: #00000086;
+	--area: var(--background2);
+	--accent: hsl(195, 55%, 83%);
+}

@@ -1,0 +1,20 @@
+<html><head>
+  <script>appname="QuickNote";appIcon="note";accentColor="#fcab64";appInfo="QuickNote\nTake notes quickly.\nVersion: 1.1"</script>
+  <style>html{background:#222}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  
+  <script src="/apiLoader/main.js"></script>
+</head>
+<body>
+    <header>
+      <p1 id="header"></p1>
+      <div class="actionBar">
+        <button onclick="saveNote()"><span class="icon">check</span>Save</button>
+        <button onclick="deleteNote()"><span class="icon">clear</span>Delete</button>  
+      </div>
+    </header>
+    
+    <textarea class="textareabig" spellcheck="false" id="text" autofocus></textarea>
+    <script src="./main.js"></script>
+</body>
+</html>

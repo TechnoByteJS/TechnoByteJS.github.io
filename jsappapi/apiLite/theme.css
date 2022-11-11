@@ -1,0 +1,410 @@
+:root {
+    --background: #ffffff;
+    --background2: #dddddd;
+    --shadow: #aaaaaa;
+    --foreground: #000000;
+    --foreground2: #888888;
+    --foreground3: #dddddd;
+    --elementcolor: #dddddd;
+    --active: #aaaaaa;
+    --border: #888888;
+    --transparent: #00000000;
+    --black: #666666;
+    --darkoverlay: #00000086;
+    --accent:#666;
+    --accent2:#666
+  }
+
+header {
+    background-color: var(--elementcolor);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 3px var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 990;
+    font-family: Arial
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background)
+}
+
+body {
+    z-index: 0;
+    margin-top: 80px;
+    user-select: none;
+    color: var(--foreground);
+    font-family:  Arial
+}
+
+e {
+    display: block;
+    border-left: 2px solid var(--transparent);
+    padding: 10px;
+    font-size: 14px
+}
+
+r {
+    float: right;
+    color: var(--foreground2)
+}
+
+.alt {
+    color: var(--foreground2)
+}
+
+p {
+    font-size: 14px;
+    margin: 10px
+}
+
+p2 {
+    display: block;
+    margin: 13px;
+    font-weight: 700;
+    width: max-content;
+
+}
+
+img {
+    border-radius: 5px
+}
+
+p1 {
+    font-size: 36px
+}
+
+.area {
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    margin: 15px
+}
+
+textarea {
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    color: var(--foreground);
+    border-radius: 5px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    height: 240px;
+    resize: none;
+}
+
+input[type="password"], input[type="text"] {
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  color: var(--foreground);
+  padding: 5px;
+  height: 40px;
+  width: 280px;
+}
+
+input:focus {
+    border-color: var(--foreground)
+}
+
+textarea:focus {
+    border-color: var(--foreground)
+}
+
+button, .button {
+    font-family: Arial;
+    background-color: var(--elementcolor);
+    padding: 10px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    color: var(--foreground);
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:active, .button:active {
+    cursor: default;
+    background-color: var(--active)
+}
+
+:focus {
+    outline: 0
+}
+
+f {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    color: var(--foreground3);
+    margin-bottom: 5px
+}
+
+#loadingscreen {
+    position: fixed;
+    background-color: var(--background2);
+    color: var(--foreground);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999
+}
+
+#loadingtext {
+    font-size: 48px;
+    font-family: sans-serif;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+#jslogo {
+    position: fixed;
+    font-size: 24px;
+    bottom: 10px;
+    right: 10px;
+    color: var(--foreground2)
+}
+
+#dialog {
+    z-index: 9999;
+    padding: 10px;
+    position: fixed;
+    background: var(--elementcolor);
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    width: 300px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -150px;
+    box-shadow: 0 0 16px 1px var(--shadow)
+}
+
+div#dialog>button {
+    min-width: 50px;
+    right: 0;
+    bottom: 0;
+    position: absolute
+}
+
+#overlay {
+    z-index: 9998;
+    position: fixed;
+    background-color: var(--darkoverlay);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+select {
+    background-color: var(--elementcolor);
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    color: var(--foreground);
+    margin: 5px;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+select:active {
+    background-color: var(--active);
+    border: 2px solid var(--border) !important;
+    border-bottom-color: var(--transparent) !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.headerButtons {
+    /* border: 2px solid var(--border); */
+    border-top: 0;
+    border-right: 0;
+    background-color: var(--transparent);
+    position: fixed;
+    top:0;
+    right:0;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 999;
+    border-bottom-left-radius: 5px;
+}
+.headerButton {
+    width: 34px;
+    height: 34px;
+    padding:0;
+    background-color: var(--transparent);
+    font-size: 20px;
+    margin: 3px;
+}
+
+/* Hides all icons */
+.Icon, .icon, .appIcon {
+    display: none;
+}
+
+input[type="password"], input[type="text"], input[type="number"] {
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  color: var(--foreground);
+  padding: 5px;
+  height: 40px;
+  width: 280px;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    margin: 4px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #aa1010;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+input:checked+.slider {
+    background-color: #10aa10
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px)
+}
+
+.slider.round {
+    border-radius: 17px
+}
+
+.slider.round:before {
+    border-radius: 50%
+}
+
+.toggleSwitchContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.appTile {
+    display: flex;
+    vertical-align: middle;
+    background: var(--elementcolor);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 180px;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.1s;
+    float:left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.appTile p {
+    font-size: 16px;
+    margin: 5px;
+}
+
+.appTile:hover {
+    border-color: var(--foreground);
+}
+
+@media(hover: hover) {
+    e:hover {
+        background-color: var(--elementcolor)
+    }
+
+    button:hover {
+        border: 2px solid var(--foreground)
+    }
+
+    .button:hover {
+        border: 2px solid var(--foreground)
+    }
+
+    select:hover {
+        border: 2px solid var(--foreground)
+    }
+}
+
+@media(max-width: 400px) {
+    p1 {
+        font-size: 24px
+    }
+
+    header {
+        text-align: left;
+        padding: 5px
+    }
+
+    #dialog {
+        position: fixed;
+        height: 100px;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-top: -50px;
+        margin-left: 0;
+        width: auto
+    }
+}
+
+@media(min-width: 800px) {
+    #dialog {
+        width: 600px !important;
+        height: 200px !important;
+        margin-top: -100px !important;
+        margin-left: -300px !important
+    }
+}
