@@ -263,11 +263,7 @@ function closeDialog(id) {
 
 // Opens an App
 function openApp(appName) {
-	if(appName==localStorage.launcher) {
-		location="https://projectjshost.github.io/"+localStorage.launcher
-	} else {
-		location.pathname = "/" + appName + "/";
-	}
+	location.pathname = "/" + appName + "/";
 }
 
 // Sets a theme
